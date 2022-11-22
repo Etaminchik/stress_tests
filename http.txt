@@ -1,0 +1,221 @@
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp") 
+VALUES ([task_id_1], [sess_id], 1002, NULL, '[low_date_year]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[year_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <separator>4</separator>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>\*sliv.top\*</url>
+                     </resource>
+                  </recoded-find-mask>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp") 
+VALUES ([task_id_2], [sess_id], 1002, NULL, '[low_date_year]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[year_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <separator>0</separator>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>\*sliv.top\*</url>
+                     </resource>
+                  </recoded-find-mask>
+                  <separator>3</separator>
+                  <separator>4</separator>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>\*sliv.top\*</url>
+                     </resource>
+                  </recoded-find-mask>
+                  <separator>1</separator>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp") 
+VALUES ([task_id_3], [sess_id], 1002, NULL, '[low_date_month]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[month_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <separator>4</separator>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>\*sliv.top\*</url>
+                     </resource>
+                  </recoded-find-mask>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp")
+VALUES ([task_id_4], [sess_id], 1002, NULL, '[low_date_month]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[month_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <separator>4</separator>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>\*sliv.top\*</url>
+                     </resource>
+                  </recoded-find-mask>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp")
+VALUES ([task_id_5], [sess_id], 1002, NULL, '[low_date_month]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[month_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <separator>4</separator>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>https://sliv.top</url>
+                     </resource>
+                  </recoded-find-mask>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp")
+VALUES ([task_id_6], [sess_id], 1002, NULL, '[low_date_day]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[day_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>*.jpeg*</url>
+                     </resource>
+                  </recoded-find-mask>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp")
+VALUES ([task_id_7], [sess_id], 1002, NULL, '[low_date_day]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[day_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>*.jpeg*</url>
+                     </resource>
+                  </recoded-find-mask>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+INSERT INTO oimm.tasks ("task_id", "task_sess_id", "task_tsta_id", "task_report_limit", "task_low_analyzing_date", "task_high_analyzing_date", "task_body", "task_request_key", "task_creation_date", "task_start_execution_date", "task_completion_date", "task_loading_date", "task_dropping_date", "task_report_structure_key", "task_report_size", "task_report_limit_exceeded", "task_error_description", "task_hidden", "task_report_record_size", "task_report_provider_info", "task_prepared_report_size", "task_last_stage_timestamp")
+VALUES ([task_id_8], [sess_id], 1002, NULL, '[low_date_month]', '[high_date]', '<NRST-TaskMessage>
+   <benchboard-type>1</benchboard-type>
+   <benchboard-uid>emulator</benchboard-uid>
+   <session-uid>[sess_uid]</session-uid>
+   <channel-number>1</channel-number>
+   <NRST-TaskMessageData>
+      <create-task-request>
+         <range>
+            <begin-find>[month_ago]Z</begin-find>
+            <end-find>[end_date]Z</end-find>
+         </range>
+         <task>
+            <connections>
+               <validate-data>
+                  <recoded-find-mask>
+                     <resource>
+                        <url>*.jpeg*</url>
+                     </resource>
+                  </recoded-find-mask>
+               </validate-data>
+            </connections>
+         </task>
+      </create-task-request>
+   </NRST-TaskMessageData>
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[high_date]', NULL, NULL, NULL, NULL, '31', 43838810, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
