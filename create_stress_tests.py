@@ -30,7 +30,6 @@ con = psycopg2.connect(
 )
 
 task_create_date = (datetime.today() - timedelta(hours=3)).strftime("%Y-%m-%d %H:%M:%S")
-print(task_create_date )
 cur = con.cursor()  
 
 
@@ -55,8 +54,6 @@ def free_task():
   else:
     task = select[0][0] + 1 
   return task
-print(count_tasks)
-print(login)
 
 cur.execute("select sess_id, sess_uid  from oimm.sessions where sess_benchboard_uid = 'emulator' and sess_channel_number =1 order by sess_id desc limit 1")
 sess_id,sess_uid = cur.fetchall()[0]
