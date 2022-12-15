@@ -199,5 +199,10 @@ with open("tmp.txt", "w") as myfile:
     myfile.write(task_create_date)
 
 
+start = input('Start? Y/n ')
+if start == 'Y':
+  cur.execute(f"update oimm.tasks set task_tsta_id = 0 where task_creation_date = '" + str(task_create_date) + "'")
+  con.commit() # save
+
 con.close() 
 
