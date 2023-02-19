@@ -1,17 +1,17 @@
 
 from variables import *
-
-from classes import Selects
 import psycopg2
 from datetime import datetime, timedelta
 import ipaddress
 import time
+from classes import Selects
 import xlsxwriter
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
+from config import *
 from email.utils import COMMASPACE, formatdate
 
 
@@ -220,7 +220,7 @@ print(create_task_login(int(tasks_year),365)) # year
 
 comment_filter = '<!--Comment:/load_tests/' +str(curent_tests).zfill(2)
 #comment_filter = '<!--Comment:/load_tests/12'
-
+print(comment_filter)
 cur.execute(f"update oimm.tasks set task_tsta_id = 0 where task_body like '{comment_filter}/raw%'")
 con.commit() # save
 print('[ OK ] raw задачи запущены')
@@ -367,7 +367,8 @@ def fill_raw(count_tests):
   count_max = p.get_nums_tests_max(type_tests)
   for c in range(count_tests):
     result = p.get_results(c+1,type_tests)
-    for j in range(start_c, count_max+start_c):
+    count_max_current = count_max if count_max == len(result) else len(result)
+    for j in range(start_c, count_max_current+start_c):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '1 день.')
       worksheet.write( j, 2, '0:01:00')
@@ -380,7 +381,8 @@ def fill_raw(count_tests):
   count_max = p.get_nums_tests_max(type_tests)
   for c in range(count_tests):
     result = p.get_results(c+1,type_tests)
-    for j in range(start_c, count_max+start_c):
+    count_max_current = count_max if count_max == len(result) else len(result)
+    for j in range(start_c, count_max_current+start_c):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '30 дней.')
       worksheet.write( j, 2, '0:10:00')
@@ -392,7 +394,8 @@ def fill_raw(count_tests):
   count_max = p.get_nums_tests_max(type_tests)
   for c in range(count_tests):
     result = p.get_results(c+1,type_tests)
-    for j in range(start_c, count_max+start_c):
+    count_max_current = count_max if count_max == len(result) else len(result)
+    for j in range(start_c, count_max_current+start_c):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '90 дней.')
       worksheet.write( j, 2, '0:15:00')
@@ -404,7 +407,8 @@ def fill_raw(count_tests):
   count_max = p.get_nums_tests_max(type_tests)
   for c in range(count_tests):
     result = p.get_results(c+1,type_tests)
-    for j in range(start_c, count_max+start_c):
+    count_max_current = count_max if count_max == len(result) else len(result)
+    for j in range(start_c, count_max_current+start_c):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '180 дней.')
       worksheet.write( j, 2, '0:15:00')
