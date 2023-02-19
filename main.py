@@ -1,5 +1,6 @@
 
 from variables import *
+
 from classes import Selects
 import psycopg2
 from datetime import datetime, timedelta
@@ -237,7 +238,7 @@ while True:
   print(f"[ LOAD ] В работе еще: {len(result)} задач(raw)")
   if len(result) == 0:
     break
-  time.sleep(int(delay_minutes))
+  time.sleep(int(delay))
 
 
 cur.execute(f"update oimm.tasks set task_tsta_id = 0 where task_body like '{comment_filter}/ip%'")
@@ -254,7 +255,7 @@ while True:
   print(f"[ LOAD ] В работе еще: {len(result)} задач(ip)")
   if len(result) == 0:
     break
-  time.sleep(int(delay_minutes))
+  time.sleep(int(delay))
 
 cur.execute(f"update oimm.tasks set task_tsta_id = 0 where task_body like '{comment_filter}/http%'")
 con.commit() # save
@@ -270,7 +271,7 @@ while True:
   print(f"[ LOAD ] В работе еще: {len(result)} задач(http)")
   if len(result) == 0:
     break
-  time.sleep(int(delay_minutes))
+  time.sleep(int(delay))
 
 
 
