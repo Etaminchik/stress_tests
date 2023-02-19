@@ -161,7 +161,6 @@ class Selects():
         self.cur.execute(select)
         return self.cur.fetchall()
 
-
     def get_sessid(self):
         self.cur.execute("select sess_id, sess_uid  from oimm.sessions where sess_benchboard_uid = 'emulator' and sess_channel_number =1 order by sess_id desc limit 1")
         return self.cur.fetchall()[0]
