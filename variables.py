@@ -1,7 +1,7 @@
 import configparser
 config = configparser.ConfigParser()
 
-config.read('../config.conf')
+config.read('config.conf')
 
 
 tasks_day = config.get('settings','tasks_day')
