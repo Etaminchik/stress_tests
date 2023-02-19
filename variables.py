@@ -19,7 +19,7 @@ user=config.get('database','user')
 passwd=config.get('database','passwd')
 db=config.get('database','db')
 
-delay_minutes = config.get('settings','delay_minutes')
+delay = config.get('settings','delay')
 
 limit_logins_generic_history = config.get('settings','limit_logins_generic_history')
 
