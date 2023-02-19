@@ -220,7 +220,7 @@ print(create_task_login(int(tasks_year),365)) # year
 
 comment_filter = '<!--Comment:/load_tests/' +str(curent_tests).zfill(2)
 #comment_filter = '<!--Comment:/load_tests/12'
-print(comment_filter)
+
 cur.execute(f"update oimm.tasks set task_tsta_id = 0 where task_body like '{comment_filter}/raw%'")
 con.commit() # save
 print('[ OK ] raw задачи запущены')
