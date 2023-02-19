@@ -1,6 +1,6 @@
 
-from .code.variables import *
-from .code.classes import Selects
+from variables import *
+from classes import Selects
 import psycopg2
 from datetime import datetime, timedelta
 import ipaddress
