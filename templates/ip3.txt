@@ -41,4 +41,4 @@ VALUES (nextval('oimm.task_seq'), [sess_id], 1002, NULL, '[low_date]', '[high_da
          </task>
       </create-task-request>
    </NRST-TaskMessageData>
-</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[task_create_date]', NULL, NULL, NULL, NULL, '31', 0, 'f', NULL, 'f', 1, NULL, 263767, '2000-08-28');
+</NRST-TaskMessage>', '/nrst/v1/task/connections/validate-data', '[task_create_date]', NULL, NULL, NULL, NULL, '31', 0, 'f', NULL, 'f', 1, NULL, 0, '2000-08-28');
