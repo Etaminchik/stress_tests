@@ -128,7 +128,7 @@ def fill_raw(count_tests):
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
 
-  start_c +=count_max
+  if count_max != None:start_c +=count_max
 
   type_tests = 'raw_030'
   count_max = p.get_nums_tests_max(type_tests)
@@ -141,7 +141,7 @@ def fill_raw(count_tests):
       worksheet.write( j, 2, '0:10:00')
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
-  start_c +=count_max
+  if count_max != None:start_c +=count_max
 
   type_tests = 'raw_090'
   count_max = p.get_nums_tests_max(type_tests)
@@ -154,7 +154,7 @@ def fill_raw(count_tests):
       worksheet.write( j, 2, '0:15:00')
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
-  start_c +=count_max
+  if count_max != None:start_c +=count_max
 
   type_tests = 'raw_180'
   count_max = p.get_nums_tests_max(type_tests)
@@ -167,7 +167,7 @@ def fill_raw(count_tests):
       worksheet.write( j, 2, '0:15:00')
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
-  start_c +=count_max
+  if count_max != None:start_c +=count_max
 
 
 fill_http(len(num_tests))
