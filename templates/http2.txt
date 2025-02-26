@@ -15,20 +15,11 @@ VALUES (nextval('oimm.task_seq'), [sess_id], 1002, NULL, '[low_date_year]', '[hi
          <task>
             <connections>
                <validate-data>
-                  <separator>0</separator>
                   <recoded-find-mask>
                      <resource>
                         <url>\*sliv.top\*</url>
                      </resource>
                   </recoded-find-mask>
-                  <separator>3</separator>
-                  <separator>4</separator>
-                  <recoded-find-mask>
-                     <resource>
-                        <url>\*sliv.top\*</url>
-                     </resource>
-                  </recoded-find-mask>
-                  <separator>1</separator>
                </validate-data>
             </connections>
          </task>
