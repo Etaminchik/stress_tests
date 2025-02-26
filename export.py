@@ -43,7 +43,7 @@ worksheet.write(1, 4, 'Размер результата')
 
 num_tests = p.get_nums_tests()
 for i in range(len(num_tests)):
-  worksheet.write(0, 3+i*2, str(num_tests[i][1]))
+  worksheet.write(0, 3+i*4, str(num_tests[i][1]))
 
 def fill_http(count_tests):
   type_tests = 'http'
@@ -127,6 +127,8 @@ def fill_raw(count_tests):
       worksheet.write( j, 2, '0:01:00')
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
 
   if count_max != None:start_c +=count_max
 
@@ -141,6 +143,8 @@ def fill_raw(count_tests):
       worksheet.write( j, 2, '0:10:00')
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
   if count_max != None:start_c +=count_max
 
   type_tests = 'raw_090'
@@ -154,6 +158,8 @@ def fill_raw(count_tests):
       worksheet.write( j, 2, '0:15:00')
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
   if count_max != None:start_c +=count_max
 
   type_tests = 'raw_180'
@@ -167,6 +173,8 @@ def fill_raw(count_tests):
       worksheet.write( j, 2, '0:15:00')
       worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
       worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
   if count_max != None:start_c +=count_max
 
 
