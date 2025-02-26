@@ -152,10 +152,11 @@ def create_task_http():
 
 def create_task_ips():
   ips = p.get_ips()
-  print(len(path_ip))
-  print(len(ips))
+  #print(len(path_ip))
+  #print(len(ips))
   if len(path_ip) != len(ips):
-    return "[ ERR ] ip задачи не созданы"
+    ips = ips + ips
+  #  return "[ ERR ] ip задачи не созданы"
 
   for i in range(len(path_ip)):
     with open(path_ip[i], 'r') as file:
