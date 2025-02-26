@@ -36,11 +36,14 @@ class Selects():
         return self.cur.fetchall()[0][0]
 
     def get_results(self,num,type_tests):
-        self.cur.execute(f"\
-            select task_completion_date - task_start_execution_date as period, \
-            task_report_size  from oimm.tasks t \
-            where task_body like '<!--Comment:/load_tests/{str(num).zfill(2)}/{type_tests}%'\
-            order by task_id ")
+        self.cur.execute(f"""
+            select task_completion_date - task_start_execution_date as period, 
+            task_report_size,
+            'LOGIN: '|| (xpath('//abonent-id/text()',task_body::xml))[1]::varchar,
+            'TASK ID: ' || task_id 
+            from oimm.tasks t 
+            where task_body like '<!--Comment:/load_tests/{str(num).zfill(2)}/{type_tests}%'
+            order by task_id """)
         return self.cur.fetchall()
 
 
