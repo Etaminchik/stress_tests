@@ -54,8 +54,8 @@ def fill_http(count_tests):
     if len(result) == 8:
       for j in range(2,10):
         
-        worksheet.write( j, 3 + c*2,str(result[j-2][0]))
-        worksheet.write( j, 4 + c*2,str(result[j-2][1]))
+        worksheet.write( j, 3 + c*4,str(result[j-2][0]))
+        worksheet.write( j, 4 + c*4,str(result[j-2][1]))
 
   worksheet.write( 2, 0, 'Поиск соединений по HTTP-URL с применением символов маскирования *.')
   worksheet.write( 2, 1, '365 дней.')
@@ -82,8 +82,8 @@ def fill_ip(count_tests):
     result = p.get_results(c+1,type_tests)
     if len(result) == 9:
       for j in range(10,19):
-        worksheet.write( j, 3 + c*2,str(result[j-10][0]))
-        worksheet.write( j, 4 + c*2,str(result[j-10][1]))
+        worksheet.write( j, 3 + c*4,str(result[j-10][0]))
+        worksheet.write( j, 4 + c*4,str(result[j-10][1]))
   worksheet.write( 10, 0, 'Поиск ААА-соединений по IP-адресу пользователя.')
   worksheet.write( 10, 1, '1 день.')
   worksheet.write( 10, 2, '0:01:00')
@@ -125,10 +125,10 @@ def fill_raw(count_tests):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '1 день.')
       worksheet.write( j, 2, '0:01:00')
-      worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
-      worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
-      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
-      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
+      worksheet.write( j, 3 + c*4,str(result[j-start_c][0]))
+      worksheet.write( j, 4 + c*4,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*4,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*4,str(result[j-start_c][3]))
 
   if count_max != None:start_c +=count_max
 
@@ -141,10 +141,10 @@ def fill_raw(count_tests):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '30 дней.')
       worksheet.write( j, 2, '0:10:00')
-      worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
-      worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
-      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
-      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
+      worksheet.write( j, 3 + c*4,str(result[j-start_c][0]))
+      worksheet.write( j, 4 + c*4,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*4,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*4,str(result[j-start_c][3]))
   if count_max != None:start_c +=count_max
 
   type_tests = 'raw_090'
@@ -156,10 +156,10 @@ def fill_raw(count_tests):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '90 дней.')
       worksheet.write( j, 2, '0:15:00')
-      worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
-      worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
-      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
-      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
+      worksheet.write( j, 3 + c*4,str(result[j-start_c][0]))
+      worksheet.write( j, 4 + c*4,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*4,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*4,str(result[j-start_c][3]))
   if count_max != None:start_c +=count_max
 
   type_tests = 'raw_180'
@@ -171,10 +171,10 @@ def fill_raw(count_tests):
       worksheet.write( j, 0, 'Поиск недекодированных соединений логину пользователя.')
       worksheet.write( j, 1, '180 дней.')
       worksheet.write( j, 2, '0:15:00')
-      worksheet.write( j, 3 + c*2,str(result[j-start_c][0]))
-      worksheet.write( j, 4 + c*2,str(result[j-start_c][1]))
-      worksheet.write( j, 5 + c*2,str(result[j-start_c][2]))
-      worksheet.write( j, 6 + c*2,str(result[j-start_c][3]))
+      worksheet.write( j, 3 + c*4,str(result[j-start_c][0]))
+      worksheet.write( j, 4 + c*4,str(result[j-start_c][1]))
+      worksheet.write( j, 5 + c*4,str(result[j-start_c][2]))
+      worksheet.write( j, 6 + c*4,str(result[j-start_c][3]))
   if count_max != None:start_c +=count_max
 
 
