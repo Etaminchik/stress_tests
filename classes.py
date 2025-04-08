@@ -97,70 +97,78 @@ class Selects():
     def get_ips(self):
         date = (self.task_create_date - timedelta(hours = 3)).strftime("%Y-%m-%d")
         date_old = (self.task_create_date - timedelta(hours = 35)).strftime("%Y-%m-%d")
-        select = f"\
-            (select asev_allocated_ip,asev_allocated_ip,asev_allocated_ip, 1 as num\
-            from oimc.aaa_session_events\
-            where asev_event_time > '{date}'\
-            group by asev_allocated_ip\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select htrq_client_address,htrq_server_address,htrq_server_address, 2 as num\
-            from oimc.http_requests\
-            where htrq_begin_connection_time > '{date}'\
-            group by htrq_client_address,htrq_server_address\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select emlc_client_address, emlc_server_address,emlc_server_address,3 as num\
-            from oimc.mail_connections\
-            where emlc_begin_connection_time > '{date_old}'\
-            group by emlc_client_address, emlc_server_address\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select imcn_client_address, imcn_server_address,imcn_server_address,4 as num\
-            from oimc.im_connections\
-            where imcn_begin_connection_time > '{date_old}'\
-            group by imcn_client_address, imcn_server_address\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select vipc_client_address, vipc_server_address,vipc_server_address,5 as num\
-            from oimc.voip_connections\
-            where vipc_begin_connection_time > '{date}'\
-            group by vipc_client_address, vipc_server_address\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select ftpc_client_address, ftpc_server_address,ftpc_server_address,6 as num\
-            from oimc.ftp_connections\
-            where ftpc_begin_connection_time > '{date}'\
-            group by ftpc_client_address, ftpc_server_address\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select trmc_client_address, trmc_server_address,trmc_server_address,7 as num\
-            from oimc.terminal_connections\
-            where trmc_begin_connection_time > '{date}'\
-            group by  trmc_client_address, trmc_server_address\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select rawf_client_address, rawf_server_address,rawf_server_address,8 as num\
-            from oimc.raw_flows\
-            where rawf_begin_connection_time > '{date}'\
-            group by rawf_client_address, rawf_server_address\
-            order by count(*) desc\
-            limit 1)\
-            union\
-            (select adtr_private_address, adtr_public_address, adtr_destination_address,9 as num\
-            from oimc.address_translations\
-            where adtr_translation_time > '{date}'\
-            group by adtr_private_address, adtr_public_address, adtr_destination_address\
-            order by count(*) desc\
-            limit 1)\
-            order by num"
+        select = f"""
+            (select asev_allocated_ip,asev_allocated_ip,asev_allocated_ip, 1 as num
+            from oimc.aaa_session_events
+            where asev_event_time > '{date}'
+            and asev_allocated_ip <<inet '0.0.0.0/0'
+            group by asev_allocated_ip
+            order by count(*) desc
+            limit 1)
+            union
+            (select htrq_client_address,htrq_server_address,htrq_server_address, 2 as num
+            from oimc.http_requests
+            where htrq_begin_connection_time > '{date}'
+            and htrq_client_address <<inet '0.0.0.0/0'
+            group by htrq_client_address,htrq_server_address
+            order by count(*) desc
+            limit 1)
+            union
+            (select emlc_client_address, emlc_server_address,emlc_server_address,3 as num
+            from oimc.mail_connections
+            where emlc_begin_connection_time > '{date_old}'
+            and emlc_client_address <<inet '0.0.0.0/0'
+            group by emlc_client_address, emlc_server_address
+            order by count(*) desc
+            limit 1)
+            union
+            (select imcn_client_address, imcn_server_address,imcn_server_address,4 as num
+            from oimc.im_connections
+            where imcn_begin_connection_time > '{date_old}'
+            and imcn_client_address <<inet '0.0.0.0/0'
+            group by imcn_client_address, imcn_server_address
+            order by count(*) desc
+            limit 1)
+            union
+            (select vipc_client_address, vipc_server_address,vipc_server_address,5 as num
+            from oimc.voip_connections
+            where vipc_begin_connection_time > '{date}'
+            and vipc_client_address <<inet '0.0.0.0/0'
+            group by vipc_client_address, vipc_server_address
+            order by count(*) desc
+            limit 1)
+            union
+            (select ftpc_client_address, ftpc_server_address,ftpc_server_address,6 as num
+            from oimc.ftp_connections
+            where ftpc_begin_connection_time > '{date}'
+            and ftpc_client_address <<inet '0.0.0.0/0'
+            group by ftpc_client_address, ftpc_server_address
+            order by count(*) desc
+            limit 1)
+            union
+            (select trmc_client_address, trmc_server_address,trmc_server_address,7 as num
+            from oimc.terminal_connections
+            where trmc_begin_connection_time > '{date}'
+            and trmc_client_address <<inet '0.0.0.0/0'
+            group by  trmc_client_address, trmc_server_address
+            order by count(*) desc
+            limit 1)
+            union
+            (select rawf_client_address, rawf_server_address,rawf_server_address,8 as num
+            from oimc.raw_flows
+            where rawf_begin_connection_time > '{date}'
+            and rawf_client_address <<inet '0.0.0.0/0'
+            group by rawf_client_address, rawf_server_address
+            order by count(*) desc
+            limit 1)
+            union
+            (select adtr_private_address, adtr_public_address, adtr_destination_address,9 as num
+            from oimc.address_translations
+            where adtr_translation_time > '{date}'
+            group by adtr_private_address, adtr_public_address, adtr_destination_address
+            order by count(*) desc
+            limit 1)
+            order by num"""
         self.cur.execute(select)
         return self.cur.fetchall()
 
